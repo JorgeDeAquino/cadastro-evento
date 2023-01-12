@@ -45,5 +45,6 @@
         <footer>
             <p>Jorge  Alexandre &copy; 2023</p>
         </footer>
+        <script src="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"></script>
     </body>
 </html>
