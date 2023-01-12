@@ -4,38 +4,26 @@
 
 @section('content')
 
-<h1>Home</h1>
-@if(10 > 5)
-    <p>A condicao é true</p>
-@endif
-
-
-<p>{{ $nome }}</p>
-
-@if($nome == "Jao")
-    <p>O nome é Jao</p>
-@elseif($nome == "Jorge")
-    <p>o nome é {{ $nome }} e ele tem {{ $idade }} anos, trabalha como {{ $profissao }}</p>
-@else
-    <p>O nome nao é Jao</p>
-@endif
-
-@for($i = 0; $i < count($arr); $i++)
-    <p>{{ $arr[$i] }} - {{ $i }}</p>
-    @if($i == 2)
-        <p>o i é 2</p>
-    @endif
-@endfor
-
-@foreach($nomes as $nome)
-    <p>{{ $loop->index }}</p>
-    <p>{{ $nome }}</p>
-@endforeach
-
-{{-- inserir codigo php no blade esse comentario so aparece no blade--}}
-@php
-    $name = "Juaum";
-    echo $name;
-@endphp
+<div id="search-container" class="col-md-12">
+    <h1>Busque um evento</h1>
+    <form action="">
+        <input type="text" id="search" name="search" class="form-control" placeholder="Procurar">
+    </form>
+</div>
+<div id="events-container" class="col-md-12">
+    <h2>Proximos Eventos</h2>
+    <p class="subtitle">Veja os eventos dos proximos dias</p>
+    <div id="cards-container" class="row">
+        @foreach($events as $event)
+        <div class="card col-md-3">
+            <img src="" alt="{{ $event->title }}">
+            <p class="card-date">07/03/2023</p>
+            <h5 class="card-title">{{ $event->title }}</h5>
+            <p class="card-participants">X Participantes</p>
+            <a href="#" class="btn btn-primary">Saber mais</a>
+        </div>
+        @endforeach
+    </div>
+</div>
 
 @endsection
