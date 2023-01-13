@@ -7,6 +7,7 @@
 <div id="event-create-container" class="col-md-6 offset-md-3">
     <h1>Crie o seu evento</h1>
     <form action="/events" method="POST">
+        <!-- @csrf é a diretiva para poder enviar o dado para db -->
         @csrf
         <div class="form-group">
             <label for="title">Evento:</label>
