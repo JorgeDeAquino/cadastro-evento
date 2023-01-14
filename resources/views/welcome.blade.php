@@ -23,6 +23,9 @@
             <a href="/events/{{ $event->id }}" class="btn btn-primary">Saber mais</a>
         </div>
         @endforeach
+        @if(count($events) == 0)
+            <p>Não há eventos disponíveis no momento =/</p>
+        @endif
     </div>
 </div>
 
