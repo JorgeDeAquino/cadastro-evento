@@ -15,7 +15,7 @@ class EventController extends Controller
 
         if($search) {
 
-            $events = Events::where([
+            $events = Event::where([
                 ['title', 'like', '%'.$search.'%']
             ])->get();
 
