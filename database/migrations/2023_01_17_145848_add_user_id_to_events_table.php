@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::table('events', function (Blueprint $table) {
-            $table->forignId('user_id')->constrained();
+            $table->foreignId('user_id')->constrained();
         });
     }
 
@@ -26,7 +26,7 @@ return new class extends Migration
     public function down()
     {
         Schema::table('events', function (Blueprint $table) {
-            $table->forignId('user_id')
+            $table->foreignId('user_id')
             ->constrained()
             ->onDelete('cascade');
         });
