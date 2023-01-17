@@ -30,4 +30,3 @@ Route::get('/contact', function () {
 });
 
 Route::get('/dashboard', [EventController::class, 'dashboard'])->middleware('auth');
-
